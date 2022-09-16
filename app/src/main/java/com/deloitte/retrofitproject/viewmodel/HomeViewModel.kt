@@ -9,9 +9,14 @@ import com.deloitte.retrofitproject.repository.HomeActivityRepository
 class HomeViewModel : ViewModel() {
 
   var albumLiveData: MutableLiveData<List<Albums>>? = null
+  var homeActivityRepository: HomeActivityRepository? = null
 
-  fun getUser() : LiveData<List<Albums>>? {
-    albumLiveData = HomeActivityRepository.getServicesApiCall()
+  fun setHomeRepository(homeActivityRepository: HomeActivityRepository){
+    this.homeActivityRepository = homeActivityRepository
+  }
+
+  fun getAlbums() : LiveData<List<Albums>>? {
+    albumLiveData = homeActivityRepository?.getServicesApiCall()
     return albumLiveData
   }
 

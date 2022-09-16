@@ -8,7 +8,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-object  HomeActivityRepository {
+class  HomeActivityRepository {
   val albumData = MutableLiveData<List<Albums>>()
 
   fun getServicesApiCall(): MutableLiveData<List<Albums>> {
