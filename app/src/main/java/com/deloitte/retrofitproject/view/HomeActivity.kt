@@ -16,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
 
   lateinit var homeViewModel: HomeViewModel
 
-
+  //sample 1
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_home)
